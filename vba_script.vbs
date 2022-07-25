@@ -1,12 +1,17 @@
 Attribute VB_Name = "Module1"
 Sub testing():
 
+Dim total_volumn, max_total_volumn, last_row As LongLong
+Dim year_open, year_close, year_change, percentage_change, greatest_inc, greatest_dec As Double
+Dim ticker, inc_ticker, dec_ticker, max_ticker As String
+Dim write_row, bonus_row As Long
+    
 For Each ws In Worksheets:
-    Dim total_volumn, max_tota_volumn, last_row As LongLong
-    Dim year_open, year_close, year_change, percentage_change, greatest_inc, greatest_dec As Double
-    Dim ticker, inc_ticker, dec_ticker, max_ticker As String
-    Dim write_row, bonus_row As Long
+
     total_volumn = 0
+    max_total_volumn = 0
+    greatest_dec = 0
+    greatest_inc = 0
     write_row = 2
     last_row = ws.Cells(Rows.Count, 1).End(xlUp).Row
     
@@ -77,4 +82,3 @@ For Each ws In Worksheets:
 Next ws
 
 End Sub
-
